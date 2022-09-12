@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -54,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         // padding: EdgeInsets.all(16.0),
-        children: [
+        children: <Widget>[
           Container(
             padding: EdgeInsets.all(16.0),
             child: Row(
@@ -66,25 +68,64 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(15.0),
+            width: double.infinity,
+            child: Column(
+              children: <Widget> [
+                Image(image: NetworkImage('https://pbs.twimg.com/media/Fb-cfGAX0AELhkR?format=jpg&name=medium')),
+                Padding(padding: EdgeInsets.fromLTRB(0, 10, 0, 0)),
+                Text(
+                  'Real Madrid Menjuarai Liga Champions Tahun 2001/2002',
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
+                Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 10)),
+                Container(
+                  color: Colors.purple,
+                  width: double.infinity,
+                  height: 30,
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Update',
+                    style: const TextStyle(fontSize: 15, color: Colors.white),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            
+            padding: EdgeInsets.all(15.0),
             child: Column(
               children: [
-                Image(image: NetworkImage('https://pbs.twimg.com/media/Fb-cfGAX0AELhkR?format=jpg&name=medium')),
-                Text(
-                  'Real Madrid Menjuarai Liga Champions Tahun 2021/2022',
-                  style: const TextStyle(fontWeight: FontWeight.bold),)
+                Container(
+                  alignment: Alignment.center,
+                  child: Row(
+                    children: const [
+                      Expanded(
+                        flex: 3,
+                        child: Image(
+                          image: NetworkImage('https://pbs.twimg.com/media/FcNZ8i4XEAA1rA8?format=jpg&name=large')
+                        )
+                      ),
+                      Expanded(
+                        flex: 4,
+                        child: Text("Tengah Berduka Pasca-Wafatnya Ratu Elizabeth II, Pertandingan Liga Inggris Bakal Ditunda? ", textAlign: TextAlign.center,)
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB( 10, 10, 10, 10),
+                  width: double.infinity,
+                  height: 40,
+                  color: Color.fromARGB(58, 167, 167, 167),
+                  child: Text("9 September 2022"),
+                )
               ],
             ),
           )
         ],
-        // childern: Row(
-        //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-        //   children: const [
-        //     Text("BERITA TERBARU"),
-        //     Text("PERTANDINGAN HARI INI")
-        //   ],
-        // )
-        
       ),
     );
   }
