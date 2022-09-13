@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const MyHomePage(title: 'MyApp'),
+      home: const MyHomePage(title: 'MyBall'),
     );
   }
 }
@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
+      body: ListView(
         // padding: EdgeInsets.all(16.0),
         children: <Widget>[
           DefaultTabController(
@@ -141,6 +141,43 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 40,
                     color: Color.fromARGB(58, 167, 167, 167),
                     child: Text("9 September 2022"),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 5,
+            child: Container(
+              padding: EdgeInsets.all(15.0),
+              child: Column(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    child: Row(
+                      children: const [
+                        Expanded(
+                            flex: 3,
+                            child: Image(
+                                height: 100,
+                                fit: BoxFit.fitWidth,
+                                image: NetworkImage(
+                                    'https://pbs.twimg.com/media/FcXQd2wXwAEKYj9?format=jpg&name=large'))),
+                        Expanded(
+                            flex: 4,
+                            child: Text(
+                              "Cadiz goalkeeper Ledesma brought over a medical kit for the fan who fell unconscious during the game",
+                              textAlign: TextAlign.center,
+                            ))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    width: double.infinity,
+                    height: 40,
+                    color: Color.fromARGB(58, 167, 167, 167),
+                    child: Text("11 September 2022"),
                   )
                 ],
               ),
